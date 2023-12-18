@@ -10,6 +10,7 @@ const MiniPageBuilder: React.FC = () => {
   const [selectedElement, setSelectedElement] = useState<PageElement | null>(null);
 
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
+    console.log('Drop event triggered');
     e.preventDefault();
 
     const elementType = e.dataTransfer.getData('text/plain');
